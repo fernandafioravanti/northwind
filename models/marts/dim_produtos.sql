@@ -1,6 +1,6 @@
 with
     stg_categorias as (
-        select
+        select 
             id_categoria
             , nome_categoria
             , descricao_categoria
@@ -33,6 +33,7 @@ with
             , eh_discontinuado
         from {{ ref('stg_erp__produtos') }}
     )
+    
     , joined_tabelas as (
         select
             stg_produtos.id_produto
